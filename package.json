@@ -1,0 +1,73 @@
+{
+  "name": "acjpd-speechify-text-to-speech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "module": "CommonJS",
+  "scripts": {
+    "cypress:run": "npx ci && npx wp-cypress start && npx cypress open",
+    "build": "wp-scripts build",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style 'src/**/*.*css' ",
+    "lint:js": "wp-scripts lint-js 'src/'",
+    "lint:js:fix": "wp-scripts lint-js 'src/' --fix",
+    "lint:md:docs": "wp-scripts lint-md-docs",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/achaitanyajami/acjpd-speechify-text-to-speech"
+  },
+  "author": "achaitanyajami",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/achaitanyajami/acjpd-speechify-text-to-speech/issues"
+  },
+  "homepage": "https://github.com/achaitanyajami/acjpd-speechify-text-to-speech#readme",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.26.8",
+    "@bigbite/wp-cypress": "^0.13.1",
+    "@wordpress/api-fetch": "^6.40.0",
+    "@wordpress/compose": "^6.23.0",
+    "@wordpress/data": "^9.16.0",
+    "@wordpress/i18n": "^4.41.0",
+    "@wordpress/prettier-config": "^2.24.0",
+    "@wordpress/scripts": "^26.14.0",
+    "bootstrap": "^5.3.2",
+    "cypress": "^13.3.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-file-upload": "^5.0.8",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "node-sass": "^7.0.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.0",
+    "react-dom": "^18.2.0",
+    "react-ui": "^1.0.0-beta.32",
+    "styled-components": "^6.1.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/integration",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports"
+    }
+  },
+  "dependencies": {
+    "@wordpress/components": "^29.4.0",
+    "@wordpress/edit-post": "^8.18.0",
+    "@wordpress/editor": "^14.18.0",
+    "@wordpress/element": "^6.18.0",
+    "@wordpress/plugins": "^7.18.0",
+    "eslint-plugin-react": "^7.37.4"
+  }
+}
