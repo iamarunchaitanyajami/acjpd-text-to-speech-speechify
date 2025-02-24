@@ -2,12 +2,15 @@
 /**
  * Plugin Name:       Speechify Text to Speech
  * Plugin URI:        https://github.com/achaitanyajami/acjpd-speechify-text-to-speech
+ * Description:       Generate high quality speech with our state-of-the-art Speechify in just single click.
  * Requires WP:       6.0 ( Minimal )
  * Requires PHP:      8.0
  * Version:           1.0.0
- * Author:            achaitanyajami
+ * Author:            Arun Chaitanya Jami
  * Text Domain:       acjpd-speechify-text-to-speech
- * Domain Path:       /language/
+ * Domain Path:       /language
+ * License:           GPL v2 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  *
  * @package           acjpd-speechify-text-to-speech
  * @sub-package       WordPress
