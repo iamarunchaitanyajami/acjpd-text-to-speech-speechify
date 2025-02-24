@@ -61,11 +61,11 @@ class Stream implements ConfigInterface {
 		$input = sprintf( '<speak>%s</speak>', esc_attr( $params['body']['input'] ?? '' ) );
 
 		return array(
-			'input'    => $input,
-			'language' => $params['body']['language'] ?? 'en',
-			'model'    => $params['body']['model'] ?? 'simba-base',
-			'voice_id' => $params['body']['voice_id'] ?? 'en_us_male',
-			'options'  => array(
+			'input'     => $input,
+			'languages' => $params['body']['languages'] ?? 'en',
+			'model'     => $params['body']['model'] ?? 'simba-base',
+			'voice_id'  => $params['body']['voice_id'] ?? 'en_us_male',
+			'options'   => array(
 				'loudness_normalization' => true,
 			),
 		);

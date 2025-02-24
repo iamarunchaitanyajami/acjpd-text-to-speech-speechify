@@ -64,7 +64,7 @@ class Speech implements ConfigInterface {
 		return array(
 			'audio_format' => $this->params['body']['audio_format'] ?? 'mp3',
 			'input'        => $content,
-			'language'     => $this->params['body']['language'] ?? 'en',
+			'languages'    => $this->params['body']['languages'] ?? 'en',
 			'model'        => $this->params['body']['model'] ?? 'simba-base',
 			'voice_id'     => $this->params['body']['voice_id'] ?? 'henry',
 			'options'      => array(

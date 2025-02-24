@@ -151,7 +151,7 @@ class Settings {
 					),
 					array(
 						'title'   => __( 'Language', 'acjpd-speechify-text-to-speech' ),
-						'id'      => 'language',
+						'id'      => 'languages',
 						'desc'    => __( 'Language of the input.', 'acjpd-speechify-text-to-speech' ),
 						'type'    => 'select',
 						'place'   => array(
