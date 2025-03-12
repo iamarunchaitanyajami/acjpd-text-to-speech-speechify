@@ -1,4 +1,4 @@
-# Speechify Text to Speech
+# Text to Speech with Speechify
 
 * Contributors:      iamarunchaitanyajami
 * Tags:              Speechify, text to speech, Podcast
