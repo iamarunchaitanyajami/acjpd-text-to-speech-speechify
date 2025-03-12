@@ -2,7 +2,7 @@
 /**
  * Speechify Voice config.
  *
- * @package acjpd-speechify-text-to-speech
+ * @package acjpd-text-to-speech-speechify
  * @sub-package WordPress
  */
 

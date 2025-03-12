@@ -2,7 +2,7 @@
 /**
  * Register Custom Cron.
  *
- * @package acjpd-speechify-text-to-speech
+ * @package acjpd-text-to-speech-speechify
  * @sub-package WordPress
  */
 
@@ -51,12 +51,12 @@ class Cron {
 	public function add_cron_interval( array $schedules ): array {
 		$schedules[ ACJPD_TEXT_TO_SPEECH_PREFIX . 'import_eight_hours' ] = array(
 			'interval' => 28800,
-			'display'  => esc_html__( 'NewsUk Sport Feed Cron Import: Every Eight Hours', 'acjpd-speechify-text-to-speech' ),
+			'display'  => esc_html__( 'NewsUk Sport Feed Cron Import: Every Eight Hours', 'acjpd-text-to-speech-speechify' ),
 		);
 
 		$schedules[ ACJPD_TEXT_TO_SPEECH_PREFIX . 'import_every_one_hour' ] = array(
 			'interval' => HOUR_IN_SECONDS,
-			'display'  => esc_html__( 'NewsUk Sport Feed Cron Import: Every One Hour', 'acjpd-speechify-text-to-speech' ),
+			'display'  => esc_html__( 'NewsUk Sport Feed Cron Import: Every One Hour', 'acjpd-text-to-speech-speechify' ),
 		);
 
 		return apply_filters( ACJPD_TEXT_TO_SPEECH_PREFIX . 'import_cron_schedules', $schedules );

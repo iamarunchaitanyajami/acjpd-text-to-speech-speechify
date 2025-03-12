@@ -2,7 +2,7 @@
 /**
  * Post type class for multiple post type instances.
  *
- * @package acjpd-speechify-text-to-speech
+ * @package acjpd-text-to-speech-speechify
  * @sub-package WordPress
  */
 

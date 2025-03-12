@@ -2,7 +2,7 @@
 /**
  * Register post type meta.
  *
- * @package acjpd-speechify-text-to-speech
+ * @package acjpd-text-to-speech-speechify
  * @sub-package WordPress
  */
 
@@ -57,15 +57,21 @@ class RegisterMeta {
 				'single'         => true,
 				'show_in_rest'   => true,
 			),
+			'speechify_conversion_done'   => array(
+				'object_subtype' => 'post',
+				'type'           => 'string',
+				'single'         => true,
+				'show_in_rest'   => true,
+			),
 		);
 
-		foreach ( $register_meta_keys as $register_meta_key => $register_callbacks ) {
+		foreach ( $register_meta_keys as $register_meta_key => $register_args ) {
 			foreach ( $this->allowed_posts as $allowed_post ) {
-				$register_callbacks['object_subtype'] = $allowed_post;
+				$register_args['object_subtype'] = $allowed_post;
 				register_meta(
 					'post',
 					$register_meta_key,
-					$register_callbacks
+					$register_args
 				);
 			}
 		}
@@ -90,7 +96,6 @@ class RegisterMeta {
 
 			$response->data['meta']['speechify_conversion_audio']  = ! empty( $conversion_link->audio_data ) ? $conversion_link->audio_data : '';
 			$response->data['meta']['speechify_conversion_format'] = ! empty( $conversion_link->audio_format ) ? $conversion_link->audio_format : '';
-			$response->data['meta']['speechify_conversion_done']   = ! empty( $response->data['meta']['speechify_conversion_audio'] );
 		}
 
 		return $response;

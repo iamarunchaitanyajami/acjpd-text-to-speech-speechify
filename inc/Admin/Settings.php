@@ -2,7 +2,7 @@
 /**
  * Settings Menu.
  *
- * @package           acjpd-speechify-text-to-speech
+ * @package           acjpd-text-to-speech-speechify
  * @sub-package       WordPress
  */
 
@@ -18,7 +18,7 @@ class Settings {
 	 *
 	 * @var string
 	 */
-	public string $page_id = 'acjpd-speechify-text-to-speech-page';
+	public string $page_id = 'acjpd-text-to-speech-speechify-page';
 
 	/**
 	 * Hooks init.
@@ -59,19 +59,19 @@ class Settings {
 		$my_pages = array(
 			array(
 				'id'   => $this->page_id,
-				'name' => __( 'Speechify Settings', 'acjpd-speechify-text-to-speech' ),
+				'name' => __( 'Speechify Settings', 'acjpd-text-to-speech-speechify' ),
 				'tabs' => array(
 					array(
 						'id'   => 'api-settings',
-						'name' => __( 'Credentials', 'acjpd-speechify-text-to-speech' ),
+						'name' => __( 'Credentials', 'acjpd-text-to-speech-speechify' ),
 					),
 					array(
 						'id'   => 'speech-settings',
-						'name' => __( 'Speech / Stream', 'acjpd-speechify-text-to-speech' ),
+						'name' => __( 'Speech / Stream', 'acjpd-text-to-speech-speechify' ),
 					),
 					array(
 						'id'   => 'wp-settings',
-						'name' => __( 'Settings', 'acjpd-speechify-text-to-speech' ),
+						'name' => __( 'Settings', 'acjpd-text-to-speech-speechify' ),
 					),
 				),
 			),
@@ -98,9 +98,9 @@ class Settings {
 				'type'   => 'field_group',
 				'fields' => array(
 					array(
-						'title' => __( 'API Key', 'acjpd-speechify-text-to-speech' ),
+						'title' => __( 'API Key', 'acjpd-text-to-speech-speechify' ),
 						'id'    => 'api_key',
-						'desc'  => __( 'Get key from https://console.sws.speechify.com/api-keys', 'acjpd-speechify-text-to-speech' ),
+						'desc'  => __( 'Get key from https://console.sws.speechify.com/api-keys', 'acjpd-text-to-speech-speechify' ),
 						'type'  => 'password',
 						'place' => array(
 							'page' => $this->page_id,
@@ -121,9 +121,9 @@ class Settings {
 				'type'   => 'field_group',
 				'fields' => array(
 					array(
-						'title'   => __( 'Audio Format', 'acjpd-speechify-text-to-speech' ),
+						'title'   => __( 'Audio Format', 'acjpd-text-to-speech-speechify' ),
 						'id'      => 'audio_format',
-						'desc'    => __( 'The format for the output audio, Note, that the current default is "wav"', 'acjpd-speechify-text-to-speech' ),
+						'desc'    => __( 'The format for the output audio, Note, that the current default is "wav"', 'acjpd-text-to-speech-speechify' ),
 						'type'    => 'select',
 						'place'   => array(
 							'page' => $this->page_id,
@@ -150,9 +150,9 @@ class Settings {
 						),
 					),
 					array(
-						'title'   => __( 'Language', 'acjpd-speechify-text-to-speech' ),
+						'title'   => __( 'Language', 'acjpd-text-to-speech-speechify' ),
 						'id'      => 'languages',
-						'desc'    => __( 'Language of the input.', 'acjpd-speechify-text-to-speech' ),
+						'desc'    => __( 'Language of the input.', 'acjpd-text-to-speech-speechify' ),
 						'type'    => 'select',
 						'place'   => array(
 							'page' => $this->page_id,
@@ -187,9 +187,9 @@ class Settings {
 						),
 					),
 					array(
-						'title'   => __( 'Model', 'acjpd-speechify-text-to-speech' ),
+						'title'   => __( 'Model', 'acjpd-text-to-speech-speechify' ),
 						'id'      => 'model',
-						'desc'    => __( 'Model used for audio synthesis.', 'acjpd-speechify-text-to-speech' ),
+						'desc'    => __( 'Model used for audio synthesis.', 'acjpd-text-to-speech-speechify' ),
 						'type'    => 'select',
 						'place'   => array(
 							'page' => $this->page_id,
@@ -216,9 +216,9 @@ class Settings {
 						),
 					),
 					array(
-						'title'     => __( 'Voice Model', 'acjpd-speechify-text-to-speech' ),
+						'title'     => __( 'Voice Model', 'acjpd-text-to-speech-speechify' ),
 						'id'        => 'voice_id',
-						'desc'      => __( 'Id of the voice to be used for synthesizing speech. Make sure your wordpress cron`s were running.', 'acjpd-speechify-text-to-speech' ),
+						'desc'      => __( 'Id of the voice to be used for synthesizing speech. Make sure your wordpress cron`s were running.', 'acjpd-text-to-speech-speechify' ),
 						'place'     => array(
 							'page' => $this->page_id,
 							'tab'  => 'api-settings',
@@ -260,9 +260,9 @@ class Settings {
 				'type'   => 'field_group',
 				'fields' => array(
 					array(
-						'title'    => __( 'Allow Post type`s', 'acjpd-speechify-text-to-speech' ),
+						'title'    => __( 'Allow Post type`s', 'acjpd-text-to-speech-speechify' ),
 						'id'       => 'allowed_post_types',
-						'desc'     => __( 'Select the list of post type to be allowed for the Speechify', 'acjpd-speechify-text-to-speech' ),
+						'desc'     => __( 'Select the list of post type to be allowed for the Speechify', 'acjpd-text-to-speech-speechify' ),
 						'type'     => 'datalist',
 						'multiple' => true,
 						'place'    => array(

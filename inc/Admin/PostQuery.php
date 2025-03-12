@@ -2,7 +2,7 @@
 /**
  * Post type query class.
  *
- * @package acjpd-speechify-text-to-speech
+ * @package acjpd-text-to-speech-speechify
  * @sub-package WordPress
  */
 

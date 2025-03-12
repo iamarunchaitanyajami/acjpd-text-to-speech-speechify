@@ -2,7 +2,7 @@
 /**
  * Setup project hooks.
  *
- * @package           acjpd-speechify-text-to-speech
+ * @package           acjpd-text-to-speech-speechify
  * @sub-package       WordPress
  */
 
@@ -47,7 +47,14 @@ class Hooks {
 	 * @return int|bool|null
 	 */
 	public function update_speechify_conversion_id( ?bool $check, int $object_id, string $meta_key, mixed $meta_value ): int|bool|null {
-		if ( 'speechify_conversion_id' !== $meta_key ) {
+		if ( ! in_array(
+			$meta_key,
+			array(
+				'speechify_conversion_id',
+				'speechify_conversion_done',
+			),
+			true
+		) ) {
 			return $check;
 		}
 
@@ -94,20 +101,15 @@ class Hooks {
 
 		$post_title           = $post_speech->post_title;
 		$is_conversion_exists = get_post_meta( $post_id, 'speechify_conversion_id', true );
+
+		// If conversion already exists or the key value isn't 'true', stop the function.
 		if ( 'true' !== $_meta_value || ! empty( $is_conversion_exists ) ) {
 			return;
 		}
 
-		/**
-		 * Remove all block tags.
-		 *
-		 * @param string $content
-		 *
-		 * @return array|string|string[]|null
-		 */
 		$post_content = fn ( string $content ) => preg_replace( '/<!--\s*\/?\s*wp:[^>]+-->/', '', $content );
 		$post_content = $post_content( $post_speech->post_content );
-		$post_content = apply_filters( 'acjpd_stts_content_change', $post_content, $post_id, $post_speech );
+		$post_content = apply_filters( 'acjpd_tts_content_change', $post_content, $post_id, $post_speech );
 		$speech       = new Speech( array( 'body' => array( 'input' => _sanitize_text_fields( $post_content, true ) ) ) );
 
 		/**
@@ -118,10 +120,12 @@ class Hooks {
 			$speech_response = new Response( $speech_request );
 			$response        = $speech_response->get();
 		} catch ( \HTTP_Request2_LogicException $e ) {
+			update_post_meta( $post_id, 'speechify_conversion_done', 'false' );
 			return;
 		}
 
 		if ( is_wp_error( $response ) ) {
+			update_post_meta( $post_id, 'speechify_conversion_done', 'false' );
 			return;
 		}
 
@@ -136,6 +140,7 @@ class Hooks {
 		);
 
 		if ( is_wp_error( $speechify_id ) ) {
+			update_post_meta( $post_id, 'speechify_conversion_done', 'false' );
 			return;
 		}
 
@@ -143,8 +148,9 @@ class Hooks {
 		update_post_meta( $speechify_id, 'speechify_conversion_source_id', $post_id );
 		update_post_meta( $speechify_id, 'speechify_conversion_response', $response );
 		if ( ! empty( $response->audio_data ) ) {
-			update_post_meta( $speechify_id, 'speechify_conversion_link', $response->audio_data );
-			update_post_meta( $speechify_id, 'speechify_conversion_audio_format', $response->audio_format );
+			update_post_meta( $post_id, 'speechify_conversion_link', $response->audio_data );
+			update_post_meta( $post_id, 'speechify_conversion_audio_format', $response->audio_format );
+			update_post_meta( $post_id, 'speechify_conversion_done', 'true' );
 		}
 	}
 }

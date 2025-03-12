@@ -2,7 +2,7 @@
 /**
  * Setup admin Menu.
  *
- * @package           acjpd-speechify-text-to-speech
+ * @package           acjpd-text-to-speech-speechify
  * @sub-package       WordPress
  */
 
@@ -28,10 +28,10 @@ class Menu {
 	 */
 	public function menu_page(): void {
 		add_menu_page(
-			__( 'Speechify Editor', 'acjpd-speechify-text-to-speech' ),
-			__( 'Speechify Editor', 'acjpd-speechify-text-to-speech' ),
+			__( 'Speechify Editor', 'acjpd-text-to-speech-speechify' ),
+			__( 'Speechify Editor', 'acjpd-text-to-speech-speechify' ),
 			'manage_options',
-			'acjpd-speechify-text-to-speech-editor',
+			'acjpd-text-to-speech-speechify-editor',
 			array( $this, 'callback' ),
 			'',
 			60
@@ -44,6 +44,6 @@ class Menu {
 	 * @return void
 	 */
 	public function callback(): void {
-		printf( '<div id="acjpd-speechify-text-to-speech-ui">%s</div>', esc_attr( __( 'Loading....', 'acjpd-speechify-text-to-speech' ) ) );
+		printf( '<div id="acjpd-text-to-speech-speechify-ui">%s</div>', esc_attr( __( 'Loading....', 'acjpd-text-to-speech-speechify' ) ) );
 	}
 }
