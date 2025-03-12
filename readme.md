@@ -33,6 +33,9 @@ e.g.
 
 ## == Changelog ==
 
+### 1.0.2
+* Fixed mismatched_plugin_name
+
 ### 1.0.1
 * Text domain changes.
 * Plugin slug changes.
@@ -45,6 +48,9 @@ e.g.
 * Preserve all podcast in a separate post type hidden to public.
 
 ## == Upgrade Notice ==
+
+### 1.0.2
+* Fixed mismatched_plugin_name
 
 ### 1.0.1
 * Text domain changes.
