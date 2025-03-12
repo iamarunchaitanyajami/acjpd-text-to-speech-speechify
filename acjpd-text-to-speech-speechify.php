@@ -5,7 +5,7 @@
  * Description:       Generate high quality speech with our state-of-the-art Speechify in just single click.
  * Requires WP:       6.0 ( Minimal )
  * Requires PHP:      8.0
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Arun Chaitanya Jami
  * Text Domain:       acjpd-text-to-speech-speechify
  * License:           GPL v2 or later
@@ -29,7 +29,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'ACJPD_TEXT_TO_SPEECH_PLUGIN_VERSION', '1.0.1' );
+define( 'ACJPD_TEXT_TO_SPEECH_PLUGIN_VERSION', '1.0.2' );
 define( 'ACJPD_TEXT_TO_SPEECH_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'ACJPD_TEXT_TO_SPEECH_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'ACJPD_TEXT_TO_SPEECH_PREFIX', 'acjpdstts_' );
