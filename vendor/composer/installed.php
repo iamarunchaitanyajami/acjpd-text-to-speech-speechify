@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => 'acjpdtexttospeech/acjpd-speechify-text-to-speech',
+        'name' => 'acjpdtexttospeech/acjpd-text-to-speech-speechify',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '0fd137a5aae0214e84c647e0b7ef367cb1879e98',
+        'reference' => '78cf738b96fd941df07cf1860cb4ffe8b9539d54',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => false,
     ),
     'versions' => array(
-        'acjpdtexttospeech/acjpd-speechify-text-to-speech' => array(
+        'acjpdtexttospeech/acjpd-text-to-speech-speechify' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '0fd137a5aae0214e84c647e0b7ef367cb1879e98',
+            'reference' => '78cf738b96fd941df07cf1860cb4ffe8b9539d54',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
