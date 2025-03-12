@@ -1,5 +1,5 @@
 {
-  "name": "acjpd-speechify-text-to-speech",
+  "name": "acjpd-text-to-speech-speechify",
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
@@ -23,14 +23,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/achaitanyajami/acjpd-speechify-text-to-speech"
+    "url": "https://github.com/iamarunchaitanyajami/acjpd-text-to-speech-speechify"
   },
   "author": "achaitanyajami",
   "license": "GPL-2.0+",
   "bugs": {
-    "url": "https://github.com/achaitanyajami/acjpd-speechify-text-to-speech/issues"
+    "url": "https://github.com/iamarunchaitanyajami/acjpd-text-to-speech-speechify/issues"
   },
-  "homepage": "https://github.com/achaitanyajami/acjpd-speechify-text-to-speech#readme",
+  "homepage": "https://github.com/iamarunchaitanyajami/acjpd-text-to-speech-speechify#readme",
   "devDependencies": {
     "@babel/eslint-parser": "^7.26.8",
     "@bigbite/wp-cypress": "^0.13.1",
