@@ -28,7 +28,7 @@ This section describes how to install the plugin and get it working.
 
 e.g.
 
-1. Upload the plugin files to the `/wp-content/plugins/acjpd-speechify-text-to-speech` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/acjpd-text-to-speech-speechify` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
 
 ## == Changelog ==
@@ -56,7 +56,7 @@ e.g.
 * Will this plugin works for WordPress Single Site?
     * Yes
 * Can we extend this to multiple post types ?
-  * Yes, go to settings ``wp-admin/admin.php?page=acjpd-speechify-text-to-speech-page&tab=wp-settings`` and select the required post type.
+  * Yes, go to settings ``wp-admin/admin.php?page=acjpd-text-to-speech-speechify-page&tab=wp-settings`` and select the required post type.
 * What all language types is supported in this plugin.
   * English (en)
   * French (fr-FR)
