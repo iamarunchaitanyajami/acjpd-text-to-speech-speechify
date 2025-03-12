@@ -3,7 +3,7 @@
         'name' => 'acjpdtexttospeech/acjpd-text-to-speech-speechify',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '7f03ae59f248fc195bea329e4c43fadf10cb9174',
+        'reference' => '023724cc12fd8c4803b7968f8680df204a1d0131',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'acjpdtexttospeech/acjpd-text-to-speech-speechify' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '7f03ae59f248fc195bea329e4c43fadf10cb9174',
+            'reference' => '023724cc12fd8c4803b7968f8680df204a1d0131',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
