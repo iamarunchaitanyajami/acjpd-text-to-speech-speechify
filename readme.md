@@ -2,7 +2,7 @@
 
 * Contributors:      iamarunchaitanyajami
 * Tags:              Speechify, text to speech, Podcast
-* Stable tag:        1.0.1
+* Stable tag:        1.0.2
 * Requires at least: 5.9
 * Tested up to:      6.7
 * Requires PHP:      8.0
