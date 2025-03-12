@@ -2,8 +2,8 @@
 
 * Contributors:      iamarunchaitanyajami
 * Tags:              Speechify, text to speech, Podcast
-* Stable tag:        1.0.0
-* Requires at least: 4.3
+* Stable tag:        1.0.1
+* Requires at least: 5.9
 * Tested up to:      6.7
 * Requires PHP:      8.0
 * License: GPLv2 or later
@@ -33,6 +33,11 @@ e.g.
 
 ## == Changelog ==
 
+### 1.0.1
+* Text domain changes.
+* Plugin slug changes.
+* Fix UI issues on block editor.
+
 ### 1.0.0
 * Converts text to speech for selected post type.
 * Settings page to control the conversion flow.
@@ -40,6 +45,11 @@ e.g.
 * Preserve all podcast in a separate post type hidden to public.
 
 ## == Upgrade Notice ==
+
+### 1.0.1
+* Text domain changes.
+* Plugin slug changes.
+* Fix UI issues on block editor.
 
 ### 1.0.0
 * Converts text to speech for selected post type.
@@ -77,6 +87,6 @@ e.g.
 
 ## == Screenshots ==
 
-1. Go to `Speechify Text to Speech` Settings Screen.
+1. Go to `Text to Speech with Speechify` Settings Screen.
 2. Add speechify api-key in Credentials tab.  
 3. Select the post type you want this feature to be available.
